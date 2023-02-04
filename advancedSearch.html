@@ -3,6 +3,18 @@
     <head>
         <title>Search</title>
         <link rel="stylesheet" href="style.css">
+        <style>
+            #advanced_search {
+                background-color: blue;
+                color: white;
+                padding: 10px;
+                border-radius: 5px;
+            }
+
+            .search_params {
+                align-self: last baseline;
+            }
+        </style>
     </head>
     <body>
         <a href ="index.html">
@@ -13,23 +25,23 @@
             Image Search
         </a>
 
-        <h1>NOTHING TO SEE HERE</h1>
+        <h2>Advanced Search</h2>
         <div>
             <form action ="https://google.com/search">
                 <h6>Find Pages with</h6>
                 all these words:
-                <input type="text" name="as_q">
+                <input class="search_params" type="text" name="as_q">
                 <br>
                 this exact word or phrase:
-                <input type="text" name="as_epq">
+                <input class="search_params" type="text" name="as_epq">
                 <br>
                 any of these words
-                <input type="text" name="as_oq">
+                <input class="search_params" type="text" name="as_oq">
                 <br>                
                 none of these words
                 <input type="text" name="as_eq">
                 <br>
-                <input type="submit" value="Advanced Search">
+                <input id="advanced_search" type="submit" value="Advanced Search">
             </form>
         </div>
     </body>
