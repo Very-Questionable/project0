@@ -2,17 +2,45 @@
 <html lang="en">
     <head>
         <title>Search</title>
-        <link rel="stylesheet" href="style.css">
         <style>
+            body {
+                font-family: sans-serif;
+            }
+
             #advanced_search {
-                background-color: blue;
+                background-color: #4285f4;
                 color: white;
+                margin-top: 5px;
                 padding: 10px;
                 border-radius: 5px;
+                border-color: grey;
+            }
+
+            #grid {
+                display: grid;
+                grid-template-columns: 200px auto;
+                margin: 10px;
+                padding: 10px;
             }
 
             .search_params {
-                align-self: last baseline;
+                margin: 1px;
+                width: 100%;
+            }
+
+            .prompt {
+                width: 200px;
+                margin: 1px;
+                padding: 2px;
+            }
+
+            .search_params:hover {
+                border-color: black;
+            }
+
+            #advanced_search:hover {
+                border-color: black;
+                background-color: skyblue;
             }
         </style>
     </head>
@@ -28,20 +56,22 @@
         <h2>Advanced Search</h2>
         <div>
             <form action ="https://google.com/search">
-                <h6>Find Pages with</h6>
-                all these words:
-                <input class="search_params" type="text" name="as_q">
-                <br>
-                this exact word or phrase:
-                <input class="search_params" type="text" name="as_epq">
-                <br>
-                any of these words
-                <input class="search_params" type="text" name="as_oq">
-                <br>                
-                none of these words
-                <input type="text" name="as_eq">
-                <br>
-                <input id="advanced_search" type="submit" value="Advanced Search">
+                <div id="grid">
+                    <div class="prompt"><h4>Find Pages with...</h4></div>
+                    <div class="text_box"></div>
+                    <div class="prompt">all these words:</div>
+                    <div class="text_box"><input class="search_params" type="text" name="as_q"></div>
+                    <div class="prompt">this exact word or phrase:</div>
+                    <div class="text_box"><input class="search_params" type="text" name="as_epq"></div>
+                    <div class="prompt">any of these words:</div>
+                    <div class="text_box"><input class="search_params" type="text" name="as_oq"></div>
+                    <div class="prompt">none of these words:</div>
+                    <div class="text_box"><input class="search_params" type="text" name="as_eq"></div>
+                    <div></div>
+                    <div style="display: flex; justify-content: end;">
+                        <input id="advanced_search" type="submit" value="Advanced Search">
+                    </div>
+                </div>
             </form>
         </div>
     </body>
