@@ -1,0 +1,43 @@
+body {
+    font-family: sans-serif;
+}
+
+#advanced_search {
+    background-color: #4285f4;
+    color: white;
+    margin-top: 5px;
+    padding: 10px;
+    border-radius: 5px;
+    border-color: grey;
+}
+
+#grid {
+    display: grid;
+    grid-template-columns: 200px auto;
+    margin: 10px;
+    padding: 10px;
+}
+
+.search_params {
+    margin: 1px;
+    width: 100%;
+}
+
+.prompt {
+    width: 200px;
+    margin: 1px;
+    padding: 2px;
+}
+
+.search_params:hover {
+    border-color: black;
+}
+
+#advanced_search:hover {
+    border-color: black;
+    background-color: skyblue;
+}
+
+a {
+    float: right;
+}
